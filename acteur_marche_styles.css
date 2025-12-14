@@ -1,0 +1,435 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fcfcfc;
+    color: #111827;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.barre-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: #2d2d2d;
+}
+
+.logo-nav {
+    height: 40px;
+
+}
+
+.liens-nav {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.liens-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.liens-nav a:hover {
+    color: #1d4ed8;
+}
+
+/* BANNIERE */
+.banniere {
+    position: relative;
+    height: 65vh;
+    overflow: hidden;
+}
+
+.banniere-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.filtre-sombre {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.texte-banniere {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texte-banniere h1 {
+    font-size: 48px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 30px;
+    border-radius: 12px;
+}
+
+
+.contenu-principal {
+    flex: 1;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.contenu-principal h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+
+.pied-page {
+    background-color: #2d2d2d;
+    color: #e5e7eb;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+}
+root {
+    /* Définition des couleurs de la palette */
+    --color-primary: #003366; /* Bleu Profond */
+    --color-secondary: #000000; /* Vert Émeraude */
+    --color-accent: #FF0000; /* Rouge Vif */
+    --color-background-light: #F8F9F9;
+    --color-text-dark: ;
+    
+}
+/* --- 3. SECTION COEUR DU SUJET (choixs) --- */
+.section-choix {
+    background-color: var(--color-background-light);
+    text-align: center;
+    padding: 60px 0;
+}
+
+.section-choix h2 {
+    color: var(--color-primary);
+    margin-bottom: 40px;
+}
+
+.choix-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.choix {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex: 1;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.choix i {
+    /* Styles pour les icônes (doit être remplacé par des vraies icônes ex: Font Awesome) */
+    font-size: 3em;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+
+/* --- 1. Conteneur de Grille (Similaire à .choix-grid) --- */
+.grille-choix {
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre les cartes */
+    gap: 20px; /* Espace entre les cartes */
+    padding: 40px 0; /* Espacement de la grille elle-même */
+}
+
+/* --- 2. Carte d'Action Individuelle (.grille-element) --- */
+.grille-element {
+    /* Style de base */
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    text-decoration: none; /* Enlève le soulignement du lien */
+    color: #333; /* Couleur de texte par défaut */
+    cursor: pointer;
+
+    /* Flexbox pour la taille */
+    flex: 1 1 200px; /* Permet à la carte de grandir (1), rétrécir (1), avec une taille de base de 200px */
+    max-width: 280px; /* Limite la largeur des cartes */
+
+    /* Ombre subtile comme sur l'image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    /* Transition pour les effets de survol */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- 3. Effet de Survol --- */
+.grille-element:hover {
+    /* Soulèvement subtil (meilleur que juste l'ombre) */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 4. Style de l'Icône et du Conteneur d'Icône --- */
+.grille-element .icon-wrapper {
+    /* Le cercle blanc autour de l'icône */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Crée le cercle */
+    background-color: #fff; /* Fond blanc du cercle */
+    border: 1px solid #eee; /* Bordure très subtile */
+    margin-bottom: 15px;
+}
+
+.grille-element i {
+    /* L'icône elle-même */
+    font-size: 2.2em;
+    color: var(--color-primary); /* Utilise votre bleu profond */
+}
+
+/* --- 5. Style du Texte --- */
+.grille-element h3 {
+    color: var(--color-primary); /* Titre en bleu profond */
+    font-size: 1.2em;
+    margin: 0 0 5px 0;
+}
+
+.grille-element p {
+    color: #666; /* Texte descriptif plus clair */
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+
+.main-header {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.main-header .logo {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.main-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.main-header nav a:hover,
+.main-header nav a.active {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+.contenu_bouygues h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.contenu_bouygues {
+    /* Ceci est la clé pour l'image de fond qui donne le look de la maquette */
+    background-image: url('coeur_de_vie_bouygues.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    /* Ombre/filtre bleu sur l'image */
+}
+
+.contenu_bouygues::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 51, 102, 0.5); /* Filtre bleu foncé */
+}
+
+.contenu_bouygues {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    /*max-width: 800px;*/
+}
+
+.contenu_bouygues h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.btn-primary {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #FFC300;
+}
+
+
+.section-choix {
+    background-color: var(--color-background-light);
+    text-align: center;
+    padding: 60px 0;
+}
+
+.section-choix h2 {
+    color: var(--color-primary);
+    margin-bottom: 40px;
+}
+
+.choix-grille {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.choix {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex: 1;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.choix i {
+    /* Styles pour les icônes (doit être remplacé par des vraies icônes ex: Font Awesome) */
+    font-size: 3em;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+
+/* --- 4. SECTION SOLUTIONS --- */
+.section-solutions {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-solutions h2 {
+    color: var(--color-primary);
+    margin-bottom: 40px;
+}
+
+.solution-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.solution-item {
+    background-color: #fff;
+    border: 1px solid var(--color-secondary);
+    border-left: 5px solid var(--color-secondary); /* Bordure latérale verte pour accent */
+    border-radius: 5px;
+    padding: 15px;
+    width: 250px;
+    text-align: left;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.solution-item:hover {
+    background-color: #e9f5e9; /* Léger fond au survol */
+}
+
+.solution-item .number {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--color-accent);
+    margin-right: 10px;
+}
+
+.solution-item p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+
+.main-footer {
+    background-color: var(--color-primary);
+    color: #fff;
+    font-size: 0.9em;
+    padding: 20px 0;
+}
+
+.main-footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-footer .contact-link a {
+    color: #fff;
+    text-decoration: none;
+    border: 1px sheroolid #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.main-footer .contact-link a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
