@@ -192,12 +192,14 @@ root {
     background-color: #fff; /* Fond blanc du cercle */
     border: 1px solid #eee; /* Bordure très subtile */
     margin-bottom: 15px;
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
 }
 
 .grille-element i {
     /* L'icône elle-même */
     font-size: 2.2em;
-    color: var(--color-primary); /* Utilise votre bleu profond */
+    color: #1D4ED8
 }
 
 /* --- 5. Style du Texte --- */
@@ -212,6 +214,7 @@ root {
     font-size: 0.9em;
     line-height: 1.4;
     margin: 0;
+    text-align: center
 }
 body {
     font-family: Arial, sans-serif;
@@ -432,4 +435,12 @@ body {
 
 .main-footer .contact-link a:hover {
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.logo-acteur {
+    max-width: 100%;
+    max-height: 100%;
+
+    /* Permet à l'image de s'adapter sans déformer l'aspect général si nécessaire */
+    object-fit: contain;
 }
