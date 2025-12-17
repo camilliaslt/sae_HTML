@@ -111,16 +111,3 @@ body {
 .categorie-info strong {
     color: var(--color-primary);
 }
-/* --- Style pour le logo en haut de page --- */
-
-.logo-fiche-conteneur {
-    text-align: center; /* Centre le logo horizontalement */
-    margin-bottom: 20px; /* Espace entre le logo et le titre h1 */
-    margin-top: 20px;    /* Espace au-dessus du logo */
-}
-
-.logo-fiche {
-    max-width: 200px;    /* Ajustez la largeur selon vos besoins */
-    height: auto;        /* Garde les proportions de l'image */
-    display: inline-block;
-}
