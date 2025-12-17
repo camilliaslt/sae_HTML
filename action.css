@@ -1,0 +1,257 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #fcfcfc;
+    color: #111827;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.barre-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: #2d2d2d;
+}
+
+.logo-nav {
+    height: 40px;
+}
+
+.liens-nav {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.liens-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.liens-nav a:hover {
+    color: #1d4ed8;
+}
+
+
+.pied-page {
+    background-color: #2d2d2d;
+    color: #e5e7eb;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+}
+root {
+    /* Définition des couleurs de la palette */
+    --color-primary: #003366; /* Bleu Profond */
+    --color-secondary: #000000; /* Vert Émeraude */
+    --color-accent: #FF0000; /* Rouge Vif */
+    --color-background-light: #F8F9F9;
+    --color-text-dark: ;
+    
+}
+/* --- 3. SECTION COEUR DU SUJET (choixs) --- */
+.section-choix {
+    background-color: var(--color-background-light);
+    text-align: center;
+    padding: 60px 0;
+}
+
+.section-choix h2 {
+    color: var(--color-primary);
+    margin-bottom: 40px;
+}
+
+.choix-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.choix {
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    flex: 1;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.choix i {
+    /* Styles pour les icônes (doit être remplacé par des vraies icônes ex: Font Awesome) */
+    font-size: 3em;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+
+/* --- 1. Conteneur de Grille (Similaire à .choix-grid) --- */
+.grille-choix {
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre les cartes */
+    gap: 20px; /* Espace entre les cartes */
+    padding: 40px 0; /* Espacement de la grille elle-même */
+}
+
+/* --- 2. Carte d'Action Individuelle (.grille-element) --- */
+.grille-element {
+    /* Style de base */
+    background-color: #fff;
+    border-radius: 12px;
+    /* padding vertical et horizontal */
+    padding: 10px 40px;
+    text-align: center;
+    text-decoration: none; /* Enlève le soulignement du lien */
+    color: #333; /* Couleur de texte par défaut */
+    cursor: pointer;
+
+    /* Flexbox pour la taille */
+    /* 0: la "flexbox" garde une taille fixe */
+    /* 1: la "flexbox" peut rétrécir si besoin */
+    /* 300: la taille "par défaut" de la "flexbox", avant le changement de taille. */
+    flex: 0 1 300; /* Permet à la carte de grandir (1), rétrécir (1), avec une taille de base de 200px */
+    max-width: 350px; /* Limite la largeur des cartes */
+
+    /* Ombre subtile comme sur l'image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    /* Transition pour les effets de survol */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* --- 3. Effet de Survol --- */
+.grille-element:hover {
+    /* Soulèvement subtil (meilleur que juste l'ombre) */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 4. Style de l'Icône et du Conteneur d'Icône --- */
+.grille-element .icon-wrapper {
+    /* Le cercle blanc autour de l'icône */
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Crée le cercle */
+    background-color: #fff; /* Fond blanc du cercle */
+    border: 1px solid #eee; /* Bordure très subtile */
+    margin-bottom: 8px;
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.grille-element i {
+    /* L'icône elle-même */
+    font-size: 2.2em;
+    color: #1D4ED8
+}
+
+/* --- 5. Style du Texte --- */
+.grille-element h3 {
+    color: var(--color-primary); /* Titre en bleu profond */
+    font-size: 1.1em;
+    margin: 0 0 5px 0;
+    line-height: 1.2;
+}
+
+.grille-element p {
+    color: #666; /* Texte descriptif plus clair */
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin: 0;
+    text-align: center
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+
+.section-choix {
+    background-color: var(--color-background-light);
+    text-align: center;
+    padding: 60px 0;
+}
+
+.section-choix h2 {
+    color: var(--color-primary);
+    margin-bottom: 40px;
+}
+
+.choix-grille {
+    display: flex;
+    flex-wrap: wrap;        /* Permet aux éléments de passer à la ligne suivante */
+    justify-content: center; /* Centre les éléments sur chaque ligne */
+    gap: 30px;              /* Espace entre les cartes (horizontal et vertical) */
+    max-width: 1200px;      /* Limite la largeur pour forcer le 4ème élément à descendre */
+    margin: 0 auto;         /* Centre la grille entière dans la page */
+    align-items: flex-start; /* on aligne les éléments sans les étirer en hauteur */
+}
+
+
+.logo-actions {
+    max-width: 100%;
+    max-height: 100%;
+
+    /* Permet à l'image de s'adapter sans déformer l'aspect général si nécessaire */
+    object-fit: contain;
+}
+/* 1. Cache les cases à cocher */
+.toggle-input {
+    display: none;
+}
+
+/* 2. Prépare le conteneur pour que le message s'affiche en dessous */
+.grille-element-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* On fixe une base pour que 3 cartes rentrent sur une ligne de ~1200px */
+    flex: 0 1 300px; 
+    max-width: 300px; 
+    height: auto;
+}
+
+/* 3. Style du message caché */
+.message-cache {
+    display: none; /* Caché par défaut */
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #f0f4ff;
+    border-left: 4px solid var(--color-primary);
+    border-radius: 4px;
+    font-size: 0.9em;
+    color: var(--color-primary);
+    width: 90%;
+    text-align: justify /* on justifie le texte */
+}
+
+/* 4. L'ACTION : Affiche le message quand on clique sur la carte (label) */
+.toggle-input:checked ~ .message-cache {
+    display: block;
+}
+
+/* 5. Optionnel : Petit effet visuel sur la carte quand elle est sélectionnée */
+.toggle-input:checked + .grille-element {
+    box-shadow: 0 0 0 2px var(--color-primary);
+    transform: translateY(-5px);
+}
