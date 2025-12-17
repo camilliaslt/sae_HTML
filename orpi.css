@@ -8,6 +8,38 @@
     --color-white: #fff;
 }
 
+.barre-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: #2d2d2d;
+}
+
+.logo-nav {
+    height: 40px;
+}
+
+.liens-nav {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.liens-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.liens-nav a:hover {
+    color: #1d4ed8;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -23,44 +55,6 @@ body {
     padding: 20px 0;
 }
 
-/* --- 1. HEADER --- */
-.main-header {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-}
-
-.main-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 0;
-}
-
-.main-header .logo {
-    font-weight: bold;
-    font-size: 1.5em;
-}
-
-.main-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.main-header nav a {
-    color: var(--color-white);
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: background-color 0.3s;
-}
-
-.main-header nav a:hover,
-.main-header nav a.active {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-
 .pied-page {
     background-color: #2d2d2d;
     color: #e5e7eb;
@@ -68,46 +62,76 @@ body {
     padding: 30px;
     font-size: 14px;
 }
-
-/* --- STYLE SPECIFIQUE POUR LES PAGES DETAILS --- */
-
-.page-details {
-    padding-top: 40px;
-    padding-bottom: 60px;
+/* --- Style de l'en-tête de fiche --- */
+.header-fiche {
+    text-align: center;
+    margin: 40px 0;
 }
 
-.page-details h1 {
+.logo-entete {
+    max-width: 180px;
+    margin-bottom: 15px;
+}
+
+.header-fiche h1 {
     color: var(--color-primary);
-    border-bottom: 2px solid var(--color-accent);
-    display: inline-block;
-    margin-bottom: 30px;
+    font-size: 2em;
 }
 
-.categorie-info {
-    margin-bottom: 25px;
-    text-align: left; /* Aligne le texte à gauche pour la lecture */
+/* --- Style du Tableau (Optimisé pour look PSG.jpg) --- */
+.tableau {
+    width: 100%;
+    border-collapse: collapse; /* Changement pour des bordures nettes */
+    margin: 20px 0 50px 0;
+    background: #fff;
+    border: 1px solid #e0e0e0; /* Bordure extérieure légère */
 }
 
-.categorie-info h2 {
-    font-size: 1.3em;
-    color: var(--color-primary);
-    text-decoration: underline; /* Souligne le titre comme demandé */
-    font-weight: bold; /* Titre en gras */
-    margin-bottom: 10px;
+.tableau thead {
+    background-color: #f8f9fa; /* Gris très clair */
 }
 
-.categorie-info ul {
-    list-style-type: square; /* Style de puce carré pour changer du standard */
-    padding-left: 20px;
-    margin: 0;
+.tableau th {
+    padding: 12px 15px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    font-size: 0.9em;
 }
 
-.categorie-info li {
-    margin-bottom: 8px;
-    line-height: 1.5;
-    color: var(--color-text-dark);
+.tableau td {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0; /* Bordures sur toutes les cellules comme sur l'image */
+    vertical-align: middle;
+    font-size: 0.9em;
 }
 
-.categorie-info strong {
-    color: var(--color-primary);
+/* Colonne "Données" (Gauche) */
+.tableau td:first-child {
+    font-weight: bold;
+    color: #000;
+    background-color: #fdfdfd;
+    width: 25%;
+    text-align: left;
+}
+
+/* Colonne "Valeurs" (Milieu) */
+.tableau td:nth-child(2) {
+    text-align: center;
+    font-weight: bold;
+    width: 25%;
+    background-color: #ffffff;
+}
+
+/* Colonne "Détails" (Droite) */
+.tableau td:last-child {
+    text-align: left;
+    color: #444;
+    width: 50%;
+}
+
+/* Effet au survol pour la lisibilité */
+.tableau tbody tr:hover {
+    background-color: #f5f8ff;
 }
