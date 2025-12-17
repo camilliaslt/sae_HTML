@@ -60,228 +60,67 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* --- 2. HERO --- */
-.hero {
-    /* Ceci est la clé pour l'image de fond qui donne le look de la maquette */
-    background-image: url('coeur_de_vie_bouygues.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.pied-page {
+    background-color: #2d2d2d;
+    color: #e5e7eb;
     text-align: center;
-    position: relative;
-    /* Ombre/filtre bleu sur l'image */
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 51, 102, 0.5); /* Filtre bleu foncé */
-}
-
-.hero-content {
-    position: relative;
-    z-index: 1;
-    color: var(--color-white);
-    max-width: 800px;
-}
-
-.contenu_bouygues h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-.contenu_bouygues {
-    /* Ceci est la clé pour l'image de fond qui donne le look de la maquette */
-    background-image: url('coeur_de_vie_bouygues.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    /* Ombre/filtre bleu sur l'image */
-}
-
-.contenu_bouygues::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 51, 102, 0.5); /* Filtre bleu foncé */
-}
-
-.contenu_bouygues {
-    position: relative;
-    z-index: 1;
-    color: var(--color-white);
-    /*max-width: 800px;*/
-}
-
-.contenu_bouygues h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-.btn-primary {
-    display: inline-block;
-    background-color: var(--color-accent);
-    color: var(--color-primary);
-    padding: 12px 25px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    margin-top: 20px;
-    transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-    background-color: #FFC300;
-}
-
-/* --- 3. SECTION COEUR DU SUJET (Cards) --- */
-.section-cards {
-    background-color: var(--color-background-light);
-    text-align: center;
-    padding: 60px 0;
-}
-
-.section-cards h2 {
-    color: var(--color-primary);
-    margin-bottom: 40px;
-}
-
-.card-grid {
-    display: flex;
-    justify-content: space-around;
-    gap: 30px;
-}
-
-.card {
-    background-color: var(--color-white);
     padding: 30px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    flex: 1;
-    max-width: 300px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    font-size: 14px;
 }
 
-.card i {
-    /* Styles pour les icônes (doit être remplacé par des vraies icônes ex: Font Awesome) */
-    font-size: 3em;
-    color: var(--color-secondary);
+/* --- STYLE SPECIFIQUE POUR LES PAGES DETAILS --- */
+
+.page-details {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.page-details h1 {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-accent);
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.categorie-info {
+    margin-bottom: 25px;
+    text-align: left; /* Aligne le texte à gauche pour la lecture */
+}
+
+.categorie-info h2 {
+    font-size: 1.3em;
+    color: var(--color-primary);
+    text-decoration: underline; /* Souligne le titre comme demandé */
+    font-weight: bold; /* Titre en gras */
     margin-bottom: 10px;
 }
 
-/* --- 4. SECTION SOLUTIONS --- */
-.section-solutions {
-    padding: 60px 0;
-    text-align: center;
-}
-
-.section-solutions h2 {
-    color: var(--color-primary);
-    margin-bottom: 40px;
-}
-
-.solution-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.solution-item {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-secondary);
-    border-left: 5px solid var(--color-secondary); /* Bordure latérale verte pour accent */
-    border-radius: 5px;
-    padding: 15px;
-    width: 250px;
-    text-align: left;
-    text-decoration: none;
-    color: var(--color-text-dark);
-    transition: background-color 0.3s;
-    display: flex;
-    align-items: center;
-}
-
-.solution-item:hover {
-    background-color: #e9f5e9; /* Léger fond au survol */
-}
-
-.solution-item .number {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: var(--color-accent);
-    margin-right: 10px;
-}
-
-.solution-item p {
+.categorie-info ul {
+    list-style-type: square; /* Style de puce carré pour changer du standard */
+    padding-left: 20px;
     margin: 0;
-    line-height: 1.2;
 }
 
-/* --- 5. SECTION ECO --- */
-.section-eco {
-    background-color: var(--color-secondary);
-    color: var(--color-white);
-    display: flex;
-    padding: 80px 0;
-    align-items: center;
-    gap: 50px;
+.categorie-info li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+    color: var(--color-text-dark);
 }
 
-.eco-content {
-    flex: 2;
-    padding-left: 50px; /* Aligner le contenu à gauche */
+.categorie-info strong {
+    color: var(--color-primary);
+}
+/* --- Style pour le logo en haut de page --- */
+
+.logo-fiche-conteneur {
+    text-align: center; /* Centre le logo horizontalement */
+    margin-bottom: 20px; /* Espace entre le logo et le titre h1 */
+    margin-top: 20px;    /* Espace au-dessus du logo */
 }
 
-.eco-content h2 {
-    font-size: 2em;
-    margin-top: 0;
-}
-
-.eco-image {
-    flex: 1;
-    height: 250px;
-    background-color: #aaa; /* Placeholder pour l'image */
-    border-radius: 8px;
-    margin-right: 50px; /* Aligner l'image à droite */
-}
-
-/* --- 6. FOOTER --- */
-.main-footer {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    font-size: 0.9em;
-    padding: 20px 0;
-}
-
-.main-footer .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.main-footer .contact-link a {
-    color: var(--color-white);
-    text-decoration: none;
-    border: 1px sheroolid var(--color-white);
-    padding: 5px 10px;
-    border-radius: 3px;
-    transition: background-color 0.3s;
-}
-
-.main-footer .contact-link a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+.logo-fiche {
+    max-width: 200px;    /* Ajustez la largeur selon vos besoins */
+    height: auto;        /* Garde les proportions de l'image */
+    display: inline-block;
 }
