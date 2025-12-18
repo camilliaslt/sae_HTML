@@ -118,6 +118,10 @@ root {
     /* 300: la taille "par défaut" de la "flexbox", avant le changement de taille. */
     flex: 0 1 300; /* Permet à la carte de grandir (1), rétrécir (1), avec une taille de base de 200px */
     max-width: 350px; /* Limite la largeur des cartes */
+    display: flex; 
+    flex-direction: column; /* aligne les sous-balises (icon-wrapper et titre-carte) verticalement */
+    align-items: center;
+    justify-content: center;
 
     /* Ombre subtile comme sur l'image */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
@@ -136,7 +140,7 @@ root {
 /* --- 4. Style de l'Icône et du Conteneur d'Icône --- */
 .grille-element .icon-wrapper {
     /* Le cercle blanc autour de l'icône */
-    display: inline-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 60px;
@@ -156,11 +160,14 @@ root {
 }
 
 /* --- 5. Style du Texte --- */
-.grille-element h3 {
+.grille-element .titre-carte {
+    display: block
     color: var(--color-primary); /* Titre en bleu profond */
     font-size: 1.1em;
+    font-weight: bold;
     margin: 0 0 5px 0;
     line-height: 1.2;
+    text-align: center;
 }
 
 .grille-element p {
