@@ -1,3 +1,53 @@
+.barre-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background-color: #2d2d2d;
+}
+
+.logo-nav {
+    height: 40px;
+}
+
+.liens-nav {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.liens-nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.liens-nav a:hover {
+    color: #1d4ed8;
+}
+
+
+.pied-page {
+    background-color: #2d2d2d;
+    color: #e5e7eb;
+    text-align: center;
+    padding: 30px;
+    font-size: 14px;
+}
+
+.en-tete {
+    background: #003366; /* contraste OK */
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #eef2f5;
@@ -10,17 +60,9 @@ body {
 .contenu-principal {
     max-width: 1100px;
     margin: auto;
+    padding-top: 40px; /* on écarte la barre du vrai en-tête*/
+    padding-bottom: 40px; /* on écarte la barre du vrai pied de page */ 
 }
-
-.en-tete {
-    background: #003366; /* contraste OK */
-    color: white;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
 
 .bloc-stats {
     display: flex;
@@ -95,7 +137,7 @@ h2 {
 
 
 .conclusion {
-    background: #2d2d2d;
+    background: #003366; /* contraste OK */
     color: white;
     padding: 25px;
     border-radius: 15px;
