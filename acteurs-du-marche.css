@@ -130,7 +130,7 @@ root {
 }
 
 /* --- 4. Style de l'Icône et du Conteneur d'Icône --- */
-.grille-element .icon-wrapper {
+.grille-element .icone {
     /* Le cercle blanc autour de l'icône */
     display: inline-flex;
     justify-content: center;
@@ -171,9 +171,15 @@ body {
     padding: 0;
     background-color: #fff;
     color: #333;
+    display: flex;	/*on veut que la taille de "body" soit flexible*/
+    flex-direction: column;	/* la flexibilité se joue sur la hauteur */
+    min-height: 100vh;	/* on veut prendre 100% de la hauteur disponible */
+}
+main {
+    flex: 1; /* "main" prend tout l'espace disponible entre l'en-tête et le pied de page */
 }
 
-.container {
+.conteneur {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -186,7 +192,7 @@ body {
     color: #fff;
 }
 
-.main-header .container {
+.main-header .conteneur {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -367,7 +373,7 @@ body {
     padding: 20px 0;
 }
 
-.main-footer .container {
+.main-footer .conteneur {
     display: flex;
     justify-content: space-between;
     align-items: center;

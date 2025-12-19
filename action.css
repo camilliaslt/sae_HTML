@@ -119,7 +119,7 @@ root {
     flex: 0 1 300; /* Permet à la carte de grandir (1), rétrécir (1), avec une taille de base de 200px */
     max-width: 350px; /* Limite la largeur des cartes */
     display: flex; 
-    flex-direction: column; /* aligne les sous-balises (icon-wrapper et titre-carte) verticalement */
+    flex-direction: column; /* aligne les sous-balises (icone et titre-carte) verticalement */
     align-items: center;
     justify-content: center;
 
@@ -138,7 +138,7 @@ root {
 }
 
 /* --- 4. Style de l'Icône et du Conteneur d'Icône --- */
-.grille-element .icon-wrapper {
+.grille-element .icone {
     /* Le cercle blanc autour de l'icône */
     display: flex;
     justify-content: center;
@@ -183,9 +183,15 @@ body {
     padding: 0;
     background-color: #fff;
     color: #333;
+    display: flex;	/*on veut que la taille de "body" soit flexible*/
+    flex-direction: column;	/* la flexibilité se joue sur la hauteur */
+    min-height: 100vh;	/* on veut prendre 100% de la hauteur disponible */
+}
+main {
+    flex: 1; /* "main" prend tout l'espace disponible entre l'en-tête et le pied de page */
 }
 
-.container {
+.conteneur {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -223,12 +229,12 @@ body {
     object-fit: contain;
 }
 /* 1. Cache les cases à cocher */
-.toggle-input {
+.bascule-input {
     display: none;
 }
 
 /* 2. Prépare le conteneur pour que le message s'affiche en dessous */
-.grille-element-container {
+.grille-element-conteneur {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -253,12 +259,12 @@ body {
 }
 
 /* 4. L'ACTION : Affiche le message quand on clique sur la carte (label) */
-.toggle-input:checked ~ .message-cache {
+.bascule-input:checked ~ .message-cache {
     display: block;
 }
 
 /* 5. Optionnel : Petit effet visuel sur la carte quand elle est sélectionnée */
-.toggle-input:checked + .grille-element {
+.bascule-input:checked + .grille-element {
     box-shadow: 0 0 0 2px var(--color-primary);
     transform: translateY(-5px);
 }

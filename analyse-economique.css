@@ -54,7 +54,12 @@ body {
     color: #333;
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
+    display: flex;	/*on veut que la taille de "body" soit flexible*/
+    flex-direction: column;	/* la flexibilité se joue sur la hauteur */
+    min-height: 100vh;	/* on veut prendre 100% de la hauteur disponible */
+}
+main {
+    flex: 1; /* "main" prend tout l'espace disponible entre l'en-tête et le pied de page */
 }
 
 .contenu-principal {

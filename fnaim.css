@@ -46,9 +46,15 @@ body {
     padding: 0;
     background-color: var(--color-white);
     color: var(--color-text-dark);
+    display: flex;	/*on veut que la taille de "body" soit flexible*/
+    flex-direction: column;	/* la flexibilité se joue sur la hauteur */
+    min-height: 100vh;	/* on veut prendre 100% de la hauteur disponible */
+}
+main {
+    flex: 1; /* "main" prend tout l'espace disponible entre l'en-tête et le pied de page */
 }
 
-.container {
+.conteneur {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -63,7 +69,7 @@ body {
     font-size: 14px;
 }
 /* --- Style de l'en-tête de fiche --- */
-.header-fiche {
+.fiche-entete {
     text-align: center;
     margin: 40px 0;
 }
@@ -73,7 +79,7 @@ body {
     margin-bottom: 15px;
 }
 
-.header-fiche h1 {
+.fiche-entete h1 {
     color: var(--color-primary);
     font-size: 2em;
 }
