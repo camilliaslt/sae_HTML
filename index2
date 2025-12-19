@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secteur Immobilier - UVSQ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="barre-navigation">
+
+        <img src="uvsq.png" alt="Logo de l’Université de Versailles Saint-Quentin-en-Yvelines" class="logo-nav">
+
+    <nav>
+        <ul class="liens-nav">
+            <li><a href="orpi.html" target="_blank">ORPI</a></li>
+            <li><a href="bouyguesI.html" target="_blank">Bouygues Immobilier</a></li>
+            <li><a href="analyseE.html" target="_blank">Analyses économiques</a></li>
+            <li><a href="action.html" target="_blank">5 actions afin de dynamiser le secteur</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="banniere">
+    <img src="batiment.png" alt="Immeubles qui illustre le secteur immobilier" class="banniere-image">
+    <div class="filtre-sombre"></div>
+    <div class="texte-banniere">
+        <h1>Le Secteur Immobilier</h1>
+    </div>
+</div>
+
+<main class="contenu-principal">
+    <section class="presentation">
+        <h2>Bienvenue </h2>
+        <p>
+            Tout comprendre sur le secteur immobilier
+        </p>
+    </section>
+</main>
+
+<footer class="pied-page">
+    Présentation du secteur immobilier français – Salim Boinaheri et Camelia Soltani
+</footer>
+
+</body>
+</html>
